@@ -160,7 +160,7 @@ const CodePage = () => {
 
   useEffect(() => {
     // Set files from API response when available
-    if (selectedFunction && functionFiles) {
+    if (selectedFunction.entrypoint_path && functionFiles) {
       // ignore empty files
       // and then set file paths relative to entrypoint
       const base_path = getBasePath(selectedFunction.entrypoint_path)
