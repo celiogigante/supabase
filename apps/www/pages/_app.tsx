@@ -1,3 +1,17 @@
+// Importe o Provider no topo do arquivo
+import { PHProvider } from '@/lib/posthog';
+import PostHogPageView from '@/components/posthog-pageview';
+
+function MyApp({ Component, pageProps }) {
+  return (
+    <PHProvider>
+      <PostHogPageView />
+      <Component {...pageProps} />
+    </PHProvider>
+  );
+}
+
+export default MyApp;
 import '@code-hike/mdx/styles'
 import 'config/code-hike.scss'
 import '../styles/index.css'
